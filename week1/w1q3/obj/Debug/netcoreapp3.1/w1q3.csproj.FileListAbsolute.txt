@@ -1,0 +1,13 @@
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\bin\Debug\netcoreapp3.1\w1q3.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\bin\Debug\netcoreapp3.1\w1q3.deps.json
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\bin\Debug\netcoreapp3.1\w1q3.runtimeconfig.json
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\bin\Debug\netcoreapp3.1\w1q3.runtimeconfig.dev.json
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\bin\Debug\netcoreapp3.1\w1q3.dll
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\bin\Debug\netcoreapp3.1\w1q3.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.csprojAssemblyReference.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.AssemblyInfoInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.AssemblyInfo.cs
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.csproj.CoreCompileInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.dll
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week1\w1q3\obj\Debug\netcoreapp3.1\w1q3.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\bin\Debug\netcoreapp3.1\w2q1.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\bin\Debug\netcoreapp3.1\w2q1.deps.json
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\bin\Debug\netcoreapp3.1\w2q1.runtimeconfig.json
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\bin\Debug\netcoreapp3.1\w2q1.runtimeconfig.dev.json
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\bin\Debug\netcoreapp3.1\w2q1.dll
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\bin\Debug\netcoreapp3.1\w2q1.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.csprojAssemblyReference.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.AssemblyInfoInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.AssemblyInfo.cs
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.csproj.CoreCompileInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.dll
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week2\Week2\Week2\obj\Debug\netcoreapp3.1\w2q1.genruntimeconfig.cache

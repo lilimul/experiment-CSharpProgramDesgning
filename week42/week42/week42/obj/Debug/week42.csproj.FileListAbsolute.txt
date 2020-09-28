@@ -1,0 +1,11 @@
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\bin\Debug\week42.exe.config
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\bin\Debug\week42.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\bin\Debug\week42.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.csprojAssemblyReference.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.Properties.Resources.resources
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.csproj.GenerateResource.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.csproj.CoreCompileInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.Form1.resources
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.Addorder.resources

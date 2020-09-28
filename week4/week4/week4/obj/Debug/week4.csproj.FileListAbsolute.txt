@@ -1,0 +1,10 @@
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\bin\Debug\week4.exe.config
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\bin\Debug\week4.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\bin\Debug\week4.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.csprojAssemblyReference.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.Properties.Resources.resources
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.csproj.GenerateResource.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.csproj.CoreCompileInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week4\week4\week4\obj\Debug\week4.tree.resources

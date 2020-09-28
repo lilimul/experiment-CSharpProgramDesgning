@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;  
-using System.Xml.Serialization;  
+using System.Xml.Serialization;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace week3
 {//订单号、商品名称、客户、订单金额
     [Serializable]
    public class Order:IComparable//订单类
     {
-        public int orderId;
+        public int orderId
+        {
+            get;set;
+        }
         public List<OrderDetail> orderDetails;//订单详情
-        public int customId;
+        public int customId
+        {
+            get;set;
+        }
         public override bool Equals(object obj)//用客户id判断订单是否相等
         {
             Order order  = obj as Order;
@@ -100,18 +107,22 @@ namespace week3
                 index++;
             }
         }
-        public List<Order> Query(Func<Order, bool> condition)
-        {
-            var query = orderList.Where(o => condition(o));
-            return query.ToList();
-        }
+ 
     }
 
     public class OrderDetail//订单的详情，包括商品id和数量
     {
-        public int goodsId;
-        public int goodsCount;
-        public double goodsDiscount;
+        public int goodsId {
+            get;set;
+        }
+        public int goodsCount
+        {
+            get;set;
+        }
+        public double goodsDiscount
+        {
+            get;set;
+        }
      /*   public OrderDetail(int gid,int count,double discount=1)
         {
             goodsId = gid;
@@ -159,8 +170,14 @@ namespace week3
     }
     class good//商品
     {
-        public string name;
-        public double price;
+        public string name
+        {
+            get;set;
+        }
+        public double price
+        {
+            get;set;
+        }
    public  good(string name,double price)
     {
         this.name = name;
@@ -174,11 +191,15 @@ namespace week3
     class OrderService//订单服务类
     {
         public List<Order> orderList;
+        public List<Order> queryList;
+        public List<OrderDetail> orderDetailList;
         private int oid;
         public OrderService()//初始化
         {
             orderList = new List<Order>();
-            oid=0;
+            queryList=new List<Order>();
+            orderDetailList = new List<OrderDetail>();
+            oid =0;
         }
         public void orderToXML(){//把订单转化为xml
 
@@ -189,12 +210,12 @@ namespace week3
             }
             Console.WriteLine(File.ReadAllText("order.xml"));
         }
-        public bool XMLtoOrder()//读取xml
+        public bool XMLtoOrder(String path)//读取xml
         {
             try
             {
                 XmlSerializer xmlseri = new XmlSerializer(typeof(List<Order>));
-                using (FileStream fs= new FileStream("order.xml", FileMode.Open))
+                using (FileStream fs= new FileStream(path, FileMode.Open))
                 {
                     orderList = (List<Order>)xmlseri.Deserialize(fs);
                 }
@@ -206,6 +227,11 @@ namespace week3
             }
             Console.WriteLine("XML read!");
             return true;
+        }
+        public List<Order> Query(Func<Order, bool> condition)
+        {
+            var query = orderList.Where(o => condition(o));
+            return query.ToList();
         }
         public bool ifHaveOrder(int oid)//检查能否用oid获得订单
         {
@@ -288,7 +314,7 @@ namespace week3
             return true;
         }
             public int queryByOid(int oid,bool show){//用订单id查询
-            return orderList.FirstOrDefault(o => o.orderId == oid).orderId;
+            //return orderList.FirstOrDefault(o => o.orderId == oid).orderId;
                 if (oid<=0){
                     Console.WriteLine("Not avali oid");
                     return -1;
@@ -351,7 +377,7 @@ var orders = from Order o in orderList where o.ifHaveGood(gid) == true orderby o
 
         }*/
     }
-    class Program
+  /*  class Program
     {
         
         static void Main(string[] args)
@@ -376,5 +402,5 @@ var orders = from Order o in orderList where o.ifHaveGood(gid) == true orderby o
             oServe.XMLtoOrder();
             Console.WriteLine("Hello World!");
         }
-    }
+    }*/
 }

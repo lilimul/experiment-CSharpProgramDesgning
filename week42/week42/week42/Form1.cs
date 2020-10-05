@@ -117,6 +117,16 @@ namespace week42
         {
 
         }
+
+        private void orderDetailbindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void XMLoutBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

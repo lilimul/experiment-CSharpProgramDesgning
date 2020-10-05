@@ -1,0 +1,7 @@
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\bin\Debug\week51.exe.config
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\bin\Debug\week51.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\bin\Debug\week51.pdb
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\obj\Debug\week51.csprojAssemblyReference.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\obj\Debug\week51.csproj.CoreCompileInputs.cache
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\obj\Debug\week51.exe
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week51\week51\obj\Debug\week51.pdb

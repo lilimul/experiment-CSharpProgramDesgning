@@ -14,7 +14,10 @@ namespace week3
         {
             get;set;
         }
-        public List<OrderDetail> orderDetails;//订单详情
+        public List<OrderDetail> details;
+        public List<OrderDetail> orderDetails {
+            get { return details; }
+        }//订单详情
         public int customId
         {
             get;set;
@@ -90,7 +93,7 @@ namespace week3
         }
         public Order()//构造函数
         {
-            orderDetails = new List<OrderDetail>();
+            details = new List<OrderDetail>();
         }
         public override string ToString()//字符串化
         {
@@ -192,8 +195,12 @@ namespace week3
     {
         public List<Order> orderList;
         public List<Order> queryList;
-        public List<OrderDetail> orderDetailList;
+
         private int oid;
+        public List<OrderDetail> orderDetailList
+        {
+            get; set;
+        }
         public OrderService()//初始化
         {
             orderList = new List<Order>();

@@ -101,7 +101,7 @@ namespace week42
         private void button2_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Add new order");
-            newOrder.orderDetails = newOrderDetailList;
+            newOrder.details = newOrderDetailList;
             newOrder.customId = Convert.ToInt32(this.cusText.Text);
             Form1.addOrder(newOrder);
             this.Close();

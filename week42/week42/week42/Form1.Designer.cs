@@ -35,6 +35,15 @@
             this.XMLoutBtn = new System.Windows.Forms.Button();
             this.XMLinBtn = new System.Windows.Forms.Button();
             this.queryGroup = new System.Windows.Forms.GroupBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.QuerybyIdPage = new System.Windows.Forms.TabPage();
+            this.QueryBtnId = new System.Windows.Forms.Button();
+            this.QueryLabelId = new System.Windows.Forms.Label();
+            this.queryBoxid = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.QueryBtnGid = new System.Windows.Forms.Button();
+            this.QueryBoxGid = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.QueryBoxResult = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,24 +58,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.OrderBtnAdd = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.OrderDetailList = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.QueryBoxGid = new System.Windows.Forms.TextBox();
-            this.QueryBtnGid = new System.Windows.Forms.Button();
-            this.QuerybyIdPage = new System.Windows.Forms.TabPage();
-            this.queryBoxid = new System.Windows.Forms.TextBox();
-            this.QueryLabelId = new System.Windows.Forms.Label();
-            this.QueryBtnId = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button2 = new System.Windows.Forms.Button();
             this.orderDetailbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderDetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.AllOrderbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodsIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsDiscountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderTotalDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AllOrderbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.goodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -74,12 +80,12 @@
             this.customIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderQueryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.goodsIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.goodsDiscountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.functionLayout.SuspendLayout();
             this.xmlGroup.SuspendLayout();
             this.queryGroup.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.QuerybyIdPage.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.QueryBoxResult.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.goodsGroup.SuspendLayout();
@@ -94,10 +100,9 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.QuerybyIdPage.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailbindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllOrderbindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderQueryBindingSource)).BeginInit();
@@ -115,7 +120,7 @@
             this.functionLayout.Margin = new System.Windows.Forms.Padding(10);
             this.functionLayout.Name = "functionLayout";
             this.functionLayout.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.functionLayout.Size = new System.Drawing.Size(254, 450);
+            this.functionLayout.Size = new System.Drawing.Size(254, 537);
             this.functionLayout.TabIndex = 0;
             // 
             // xmlGroup
@@ -137,6 +142,7 @@
             this.XMLoutBtn.TabIndex = 1;
             this.XMLoutBtn.Text = "导出XML";
             this.XMLoutBtn.UseVisualStyleBackColor = true;
+            this.XMLoutBtn.Click += new System.EventHandler(this.XMLoutBtn_Click);
             // 
             // XMLinBtn
             // 
@@ -158,13 +164,103 @@
             this.queryGroup.TabStop = false;
             this.queryGroup.Text = "条件查询";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.QuerybyIdPage);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(6, 24);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(215, 153);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // QuerybyIdPage
+            // 
+            this.QuerybyIdPage.Controls.Add(this.QueryBtnId);
+            this.QuerybyIdPage.Controls.Add(this.QueryLabelId);
+            this.QuerybyIdPage.Controls.Add(this.queryBoxid);
+            this.QuerybyIdPage.Location = new System.Drawing.Point(4, 25);
+            this.QuerybyIdPage.Name = "QuerybyIdPage";
+            this.QuerybyIdPage.Padding = new System.Windows.Forms.Padding(3);
+            this.QuerybyIdPage.Size = new System.Drawing.Size(207, 124);
+            this.QuerybyIdPage.TabIndex = 0;
+            this.QuerybyIdPage.Text = "根据订单id查询";
+            this.QuerybyIdPage.UseVisualStyleBackColor = true;
+            this.QuerybyIdPage.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // QueryBtnId
+            // 
+            this.QueryBtnId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.QueryBtnId.Location = new System.Drawing.Point(110, 89);
+            this.QueryBtnId.Name = "QueryBtnId";
+            this.QueryBtnId.Size = new System.Drawing.Size(75, 29);
+            this.QueryBtnId.TabIndex = 2;
+            this.QueryBtnId.Text = "查询";
+            this.QueryBtnId.UseVisualStyleBackColor = true;
+            this.QueryBtnId.Click += new System.EventHandler(this.QueryBtnId_Click);
+            // 
+            // QueryLabelId
+            // 
+            this.QueryLabelId.AutoSize = true;
+            this.QueryLabelId.Location = new System.Drawing.Point(7, 15);
+            this.QueryLabelId.Name = "QueryLabelId";
+            this.QueryLabelId.Size = new System.Drawing.Size(53, 15);
+            this.QueryLabelId.TabIndex = 1;
+            this.QueryLabelId.Text = "订单id";
+            // 
+            // queryBoxid
+            // 
+            this.queryBoxid.Location = new System.Drawing.Point(6, 36);
+            this.queryBoxid.Name = "queryBoxid";
+            this.queryBoxid.Size = new System.Drawing.Size(180, 25);
+            this.queryBoxid.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.QueryBtnGid);
+            this.tabPage2.Controls.Add(this.QueryBoxGid);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(207, 124);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "使用商品id查询";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // QueryBtnGid
+            // 
+            this.QueryBtnGid.Location = new System.Drawing.Point(113, 88);
+            this.QueryBtnGid.Name = "QueryBtnGid";
+            this.QueryBtnGid.Size = new System.Drawing.Size(75, 30);
+            this.QueryBtnGid.TabIndex = 2;
+            this.QueryBtnGid.Text = "查询";
+            this.QueryBtnGid.UseVisualStyleBackColor = true;
+            this.QueryBtnGid.Click += new System.EventHandler(this.QueryBtnGid_Click);
+            // 
+            // QueryBoxGid
+            // 
+            this.QueryBoxGid.Location = new System.Drawing.Point(10, 34);
+            this.QueryBoxGid.Name = "QueryBoxGid";
+            this.QueryBoxGid.Size = new System.Drawing.Size(178, 25);
+            this.QueryBoxGid.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "商品id";
+            // 
             // QueryBoxResult
             // 
             this.QueryBoxResult.Controls.Add(this.textBox1);
             this.QueryBoxResult.ForeColor = System.Drawing.SystemColors.ControlText;
             this.QueryBoxResult.Location = new System.Drawing.Point(13, 327);
             this.QueryBoxResult.Name = "QueryBoxResult";
-            this.QueryBoxResult.Size = new System.Drawing.Size(227, 111);
+            this.QueryBoxResult.Size = new System.Drawing.Size(227, 198);
             this.QueryBoxResult.TabIndex = 2;
             this.QueryBoxResult.TabStop = false;
             this.QueryBoxResult.Text = "状态输出";
@@ -175,7 +271,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(207, 80);
+            this.textBox1.Size = new System.Drawing.Size(207, 155);
             this.textBox1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -187,7 +283,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(254, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(355, 450);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(462, 537);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // goodsGroup
@@ -195,7 +291,7 @@
             this.goodsGroup.Controls.Add(this.dataGridView1);
             this.goodsGroup.Location = new System.Drawing.Point(13, 13);
             this.goodsGroup.Name = "goodsGroup";
-            this.goodsGroup.Size = new System.Drawing.Size(329, 189);
+            this.goodsGroup.Size = new System.Drawing.Size(425, 189);
             this.goodsGroup.TabIndex = 0;
             this.goodsGroup.TabStop = false;
             this.goodsGroup.Text = "商品信息";
@@ -212,7 +308,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(317, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(402, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
@@ -220,7 +316,7 @@
             this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Location = new System.Drawing.Point(13, 208);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 230);
+            this.groupBox1.Size = new System.Drawing.Size(425, 317);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询列表";
@@ -238,7 +334,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(316, 199);
+            this.dataGridView2.Size = new System.Drawing.Size(401, 274);
             this.dataGridView2.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -247,10 +343,10 @@
             this.flowLayoutPanel2.Controls.Add(this.groupBox2);
             this.flowLayoutPanel2.Controls.Add(this.groupBox3);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(609, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(716, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(400, 450);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(370, 537);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // groupBox2
@@ -316,14 +412,25 @@
             this.tabPage4.Text = "其他";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(18, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "刷新订单";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.OrderDetailList);
             this.groupBox3.Controls.Add(this.dataGridView3);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox3.Location = new System.Drawing.Point(13, 151);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(348, 281);
+            this.groupBox3.Size = new System.Drawing.Size(348, 374);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "订单查看";
@@ -336,12 +443,12 @@
             this.goodsIdDataGridViewTextBoxColumn,
             this.goodsCountDataGridViewTextBoxColumn,
             this.goodsDiscountDataGridViewTextBoxColumn});
-            this.OrderDetailList.DataSource = this.orderDetailbindingSource;
-            this.OrderDetailList.Location = new System.Drawing.Point(16, 195);
+            this.OrderDetailList.DataSource = this.orderDetailsBindingSource1;
+            this.OrderDetailList.Location = new System.Drawing.Point(16, 220);
             this.OrderDetailList.Name = "OrderDetailList";
             this.OrderDetailList.RowHeadersWidth = 51;
             this.OrderDetailList.RowTemplate.Height = 27;
-            this.OrderDetailList.Size = new System.Drawing.Size(313, 80);
+            this.OrderDetailList.Size = new System.Drawing.Size(313, 148);
             this.OrderDetailList.TabIndex = 1;
             this.OrderDetailList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderDetailList_CellContentClick);
             // 
@@ -362,114 +469,63 @@
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.QueryBtnGid);
-            this.tabPage2.Controls.Add(this.QueryBoxGid);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(207, 124);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "使用商品id查询";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "商品id";
-            // 
-            // QueryBoxGid
-            // 
-            this.QueryBoxGid.Location = new System.Drawing.Point(10, 34);
-            this.QueryBoxGid.Name = "QueryBoxGid";
-            this.QueryBoxGid.Size = new System.Drawing.Size(178, 25);
-            this.QueryBoxGid.TabIndex = 1;
-            // 
-            // QueryBtnGid
-            // 
-            this.QueryBtnGid.Location = new System.Drawing.Point(113, 88);
-            this.QueryBtnGid.Name = "QueryBtnGid";
-            this.QueryBtnGid.Size = new System.Drawing.Size(75, 30);
-            this.QueryBtnGid.TabIndex = 2;
-            this.QueryBtnGid.Text = "查询";
-            this.QueryBtnGid.UseVisualStyleBackColor = true;
-            this.QueryBtnGid.Click += new System.EventHandler(this.QueryBtnGid_Click);
-            // 
-            // QuerybyIdPage
-            // 
-            this.QuerybyIdPage.Controls.Add(this.QueryBtnId);
-            this.QuerybyIdPage.Controls.Add(this.QueryLabelId);
-            this.QuerybyIdPage.Controls.Add(this.queryBoxid);
-            this.QuerybyIdPage.Location = new System.Drawing.Point(4, 25);
-            this.QuerybyIdPage.Name = "QuerybyIdPage";
-            this.QuerybyIdPage.Padding = new System.Windows.Forms.Padding(3);
-            this.QuerybyIdPage.Size = new System.Drawing.Size(207, 124);
-            this.QuerybyIdPage.TabIndex = 0;
-            this.QuerybyIdPage.Text = "根据订单id查询";
-            this.QuerybyIdPage.UseVisualStyleBackColor = true;
-            this.QuerybyIdPage.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // queryBoxid
-            // 
-            this.queryBoxid.Location = new System.Drawing.Point(6, 36);
-            this.queryBoxid.Name = "queryBoxid";
-            this.queryBoxid.Size = new System.Drawing.Size(180, 25);
-            this.queryBoxid.TabIndex = 0;
-            // 
-            // QueryLabelId
-            // 
-            this.QueryLabelId.AutoSize = true;
-            this.QueryLabelId.Location = new System.Drawing.Point(7, 15);
-            this.QueryLabelId.Name = "QueryLabelId";
-            this.QueryLabelId.Size = new System.Drawing.Size(53, 15);
-            this.QueryLabelId.TabIndex = 1;
-            this.QueryLabelId.Text = "订单id";
-            // 
-            // QueryBtnId
-            // 
-            this.QueryBtnId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.QueryBtnId.Location = new System.Drawing.Point(110, 89);
-            this.QueryBtnId.Name = "QueryBtnId";
-            this.QueryBtnId.Size = new System.Drawing.Size(75, 29);
-            this.QueryBtnId.TabIndex = 2;
-            this.QueryBtnId.Text = "查询";
-            this.QueryBtnId.UseVisualStyleBackColor = true;
-            this.QueryBtnId.Click += new System.EventHandler(this.QueryBtnId_Click);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.QuerybyIdPage);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(6, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(215, 153);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(18, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "刷新订单";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // orderDetailbindingSource
             // 
-            this.orderDetailbindingSource.DataSource = typeof(week3.OrderDetail);
+            this.orderDetailbindingSource.DataSource = this.AllOrderbindingSource;
+            this.orderDetailbindingSource.CurrentChanged += new System.EventHandler(this.orderDetailbindingSource_CurrentChanged);
+            // 
+            // orderDetailsBindingSource
+            // 
+            this.orderDetailsBindingSource.DataMember = "orderDetails";
+            this.orderDetailsBindingSource.DataSource = this.orderDetailbindingSource;
+            // 
+            // orderDetailsBindingSource1
+            // 
+            this.orderDetailsBindingSource1.DataMember = "orderDetails";
+            this.orderDetailsBindingSource1.DataSource = this.AllOrderbindingSource;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.AllOrderbindingSource, "orderId", true));
+            this.label2.Location = new System.Drawing.Point(20, 199);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "订单号";
+            // 
+            // AllOrderbindingSource
+            // 
+            this.AllOrderbindingSource.DataSource = typeof(week3.Order);
+            // 
+            // goodsIdDataGridViewTextBoxColumn
+            // 
+            this.goodsIdDataGridViewTextBoxColumn.DataPropertyName = "goodsId";
+            this.goodsIdDataGridViewTextBoxColumn.HeaderText = "goodsId";
+            this.goodsIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.goodsIdDataGridViewTextBoxColumn.Name = "goodsIdDataGridViewTextBoxColumn";
+            this.goodsIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // goodsCountDataGridViewTextBoxColumn
+            // 
+            this.goodsCountDataGridViewTextBoxColumn.DataPropertyName = "goodsCount";
+            this.goodsCountDataGridViewTextBoxColumn.HeaderText = "goodsCount";
+            this.goodsCountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.goodsCountDataGridViewTextBoxColumn.Name = "goodsCountDataGridViewTextBoxColumn";
+            this.goodsCountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // goodsDiscountDataGridViewTextBoxColumn
+            // 
+            this.goodsDiscountDataGridViewTextBoxColumn.DataPropertyName = "goodsDiscount";
+            this.goodsDiscountDataGridViewTextBoxColumn.HeaderText = "goodsDiscount";
+            this.goodsDiscountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.goodsDiscountDataGridViewTextBoxColumn.Name = "goodsDiscountDataGridViewTextBoxColumn";
+            this.goodsDiscountDataGridViewTextBoxColumn.Width = 125;
             // 
             // orderIdDataGridViewTextBoxColumn1
             // 
             this.orderIdDataGridViewTextBoxColumn1.DataPropertyName = "orderId";
-            this.orderIdDataGridViewTextBoxColumn1.HeaderText = "orderId";
+            this.orderIdDataGridViewTextBoxColumn1.HeaderText = "订单号";
             this.orderIdDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.orderIdDataGridViewTextBoxColumn1.Name = "orderIdDataGridViewTextBoxColumn1";
             this.orderIdDataGridViewTextBoxColumn1.Width = 125;
@@ -477,7 +533,7 @@
             // customIdDataGridViewTextBoxColumn1
             // 
             this.customIdDataGridViewTextBoxColumn1.DataPropertyName = "customId";
-            this.customIdDataGridViewTextBoxColumn1.HeaderText = "customId";
+            this.customIdDataGridViewTextBoxColumn1.HeaderText = "客户ID";
             this.customIdDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.customIdDataGridViewTextBoxColumn1.Name = "customIdDataGridViewTextBoxColumn1";
             this.customIdDataGridViewTextBoxColumn1.Width = 125;
@@ -485,15 +541,11 @@
             // orderTotalDataGridViewTextBoxColumn1
             // 
             this.orderTotalDataGridViewTextBoxColumn1.DataPropertyName = "orderTotal";
-            this.orderTotalDataGridViewTextBoxColumn1.HeaderText = "orderTotal";
+            this.orderTotalDataGridViewTextBoxColumn1.HeaderText = "订单总价";
             this.orderTotalDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.orderTotalDataGridViewTextBoxColumn1.Name = "orderTotalDataGridViewTextBoxColumn1";
             this.orderTotalDataGridViewTextBoxColumn1.ReadOnly = true;
             this.orderTotalDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // AllOrderbindingSource
-            // 
-            this.AllOrderbindingSource.DataSource = typeof(week3.Order);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -544,35 +596,11 @@
             // 
             this.orderQueryBindingSource.DataSource = typeof(week3.Order);
             // 
-            // goodsIdDataGridViewTextBoxColumn
-            // 
-            this.goodsIdDataGridViewTextBoxColumn.DataPropertyName = "goodsId";
-            this.goodsIdDataGridViewTextBoxColumn.HeaderText = "goodsId";
-            this.goodsIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.goodsIdDataGridViewTextBoxColumn.Name = "goodsIdDataGridViewTextBoxColumn";
-            this.goodsIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // goodsCountDataGridViewTextBoxColumn
-            // 
-            this.goodsCountDataGridViewTextBoxColumn.DataPropertyName = "goodsCount";
-            this.goodsCountDataGridViewTextBoxColumn.HeaderText = "goodsCount";
-            this.goodsCountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.goodsCountDataGridViewTextBoxColumn.Name = "goodsCountDataGridViewTextBoxColumn";
-            this.goodsCountDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // goodsDiscountDataGridViewTextBoxColumn
-            // 
-            this.goodsDiscountDataGridViewTextBoxColumn.DataPropertyName = "goodsDiscount";
-            this.goodsDiscountDataGridViewTextBoxColumn.HeaderText = "goodsDiscount";
-            this.goodsDiscountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.goodsDiscountDataGridViewTextBoxColumn.Name = "goodsDiscountDataGridViewTextBoxColumn";
-            this.goodsDiscountDataGridViewTextBoxColumn.Width = 125;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 450);
+            this.ClientSize = new System.Drawing.Size(1086, 537);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.functionLayout);
@@ -582,6 +610,11 @@
             this.functionLayout.ResumeLayout(false);
             this.xmlGroup.ResumeLayout(false);
             this.queryGroup.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.QuerybyIdPage.ResumeLayout(false);
+            this.QuerybyIdPage.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.QueryBoxResult.ResumeLayout(false);
             this.QueryBoxResult.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -595,14 +628,12 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.QuerybyIdPage.ResumeLayout(false);
-            this.QuerybyIdPage.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.orderDetailbindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllOrderbindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderQueryBindingSource)).EndInit();
@@ -642,9 +673,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button OrderBtnAdd;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderIdDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customIdDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderTotalDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource orderDetailbindingSource;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage QuerybyIdPage;
@@ -656,9 +684,15 @@
         private System.Windows.Forms.TextBox QueryBoxGid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customIdDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderTotalDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsDiscountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource orderDetailsBindingSource;
+        private System.Windows.Forms.BindingSource orderDetailsBindingSource1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

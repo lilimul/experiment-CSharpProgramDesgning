@@ -99,8 +99,8 @@ namespace week42
                 Console.WriteLine("Added");
                 this.AllOrderbindingSource.ResetBindings(true);
             });
-                
-            new Addorder().ShowDialog();
+
+            addOrderForm.ShowDialog();
         }
 
         private void AddOrderForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -126,6 +126,12 @@ namespace week42
         private void XMLoutBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonAddGoods_Click(object sender, EventArgs e)
+        {
+            Form2 addGoodsForm = new Form2();
+            addGoodsForm.Show();
         }
     }
 

@@ -9,3 +9,4 @@ C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Deb
 C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.pdb
 C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.Form1.resources
 C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.Addorder.resources
+C:\Users\JhonLee\Documents\CODING\CSharp\experiment\week42\week42\week42\obj\Debug\week42.Form2.resources
